@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #f4f8fb;
+}
+
+
+/* NAVBAR */
+
+nav {
+    background-color: #12304a;
+    padding: 18px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffb347;
+}
+
+
+/* PACKAGE SECTION */
+
+.packages {
+    padding: 55px 10%;
+    text-align: center;
+}
+
+.packages h1 {
+    font-size: 38px;
+    color: #12304a;
+    margin: 0 0 10px;
+}
+
+.package-intro {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+
+/* TABLE */
+
+table {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* HEADER */
+
+th {
+    background-color: #12304a;
+    color: white;
+    padding: 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* DATA */
+
+td {
+    padding: 18px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #444;
+}
+
+
+/* PRICE */
+
+td:last-child {
+    font-weight: bold;
+    color: #12304a;
+}
+
+
+/* HOVER */
+
+tr:not(:first-child):hover {
+    background-color: #fff7e8;
+}
+
+
+/* REMOVE BORDER FROM LAST ROW */
+
+tr:last-child td {
+    border-bottom: none;
+}
