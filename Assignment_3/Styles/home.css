@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0b16;
+    color: white;
+}
+
+/* Header */
+
+header {
+    height: 75px;
+    background-color: #151220;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+}
+
+.logo {
+    color: #d7a9ff;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: #dddddd;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav .active {
+    color: #d7a9ff;
+}
+
+/* Hero */
+
+.hero {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    background-image:
+        linear-gradient(to right, #0d0b16 30%, transparent),
+        url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.college {
+    color: #bca6cf;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 75px;
+    letter-spacing: 5px;
+}
+
+.hero h2 {
+    color: #d7a9ff;
+    font-size: 50px;
+}
+
+.description {
+    color: #c4c0ca;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 15px 0;
+}
+
+.date {
+    color: #d7a9ff;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 20px 0;
+}
+
+/* Button */
+
+.button {
+    display: inline-block;
+    background-color: #d7a9ff;
+    color: #17121f;
+    padding: 13px 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+/* Welcome */
+
+.welcome {
+    text-align: center;
+    padding: 70px 10%;
+}
+
+.welcome h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.welcome > p {
+    max-width: 750px;
+    margin: auto;
+    color: #aaa5b2;
+    line-height: 1.7;
+}
+
+.home-cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    flex: 1;
+    background-color: #181522;
+    padding: 30px;
+    border: 1px solid #302a3b;
+}
+
+.card h3 {
+    color: #d7a9ff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #aaa5b2;
+    line-height: 1.6;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #151220;
+    color: #77717e;
+    font-size: 13px;
+}
+
+/* Mobile */
+
+@media(max-width: 800px) {
+
+    header {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .hero {
+        padding: 60px 8%;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .home-cards {
+        flex-direction: column;
+    }
+}
