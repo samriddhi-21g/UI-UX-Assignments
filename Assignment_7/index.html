@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px 3px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        #addTask {
+            background-color: #4a90e2;
+        }
+
+        .task {
+            background-color: #f1f1f1;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .complete-btn {
+            background-color: #27ae60;
+        }
+
+        .edit-btn {
+            background-color: #f39c12;
+        }
+
+        .delete-btn {
+            background-color: #e74c3c;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>To-Do List</h1>
+
+        <input type="text" id="taskTitle"
+               placeholder="Enter task title">
+
+        <textarea id="taskDescription"
+                  placeholder="Enter task description"></textarea>
+
+        <button id="addTask">Add Task</button>
+
+        <div id="taskList"></div>
+
+    </div>
+
+
+    <script>
+
+        // Selecting HTML elements
+        let taskTitle = document.getElementById("taskTitle");
+        let taskDescription = document.getElementById("taskDescription");
+        let addTask = document.getElementById("addTask");
+        let taskList = document.getElementById("taskList");
+
+
+        // Function to add a new task
+        function addNewTask() {
+
+            let title = taskTitle.value.trim();
+            let description = taskDescription.value.trim();
+
+            if (title === "" || description === "") {
+                alert("Please enter both title and description!");
+                return;
+            }
+
+            // Creating a new task div
+            let taskDiv = document.createElement("div");
+            taskDiv.className = "task";
+
+            // Creating title and description elements
+            let titleElement = document.createElement("h3");
+            titleElement.textContent = title;
+
+            let descriptionElement = document.createElement("p");
+            descriptionElement.textContent = description;
+
+
+            // Creating buttons
+            let completeBtn = document.createElement("button");
+            completeBtn.textContent = "Mark as Completed";
+            completeBtn.className = "complete-btn";
+
+            let editBtn = document.createElement("button");
+            editBtn.textContent = "Edit";
+            editBtn.className = "edit-btn";
+
+            let deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete";
+            deleteBtn.className = "delete-btn";
+
+
+            // Mark task as completed or incomplete
+            completeBtn.addEventListener("click", function() {
+
+                titleElement.classList.toggle("completed");
+                descriptionElement.classList.toggle("completed");
+
+                if (completeBtn.textContent === "Mark as Completed") {
+                    completeBtn.textContent = "Mark as Incomplete";
+                }
+                else {
+                    completeBtn.textContent = "Mark as Completed";
+                }
+
+            });
+
+
+            // Delete task
+            deleteBtn.addEventListener("click", function() {
+
+                taskList.removeChild(taskDiv);
+
+            });
+
+
+            // Edit task
+            editBtn.addEventListener("click", function() {
+
+                if (editBtn.textContent === "Edit") {
+
+                    // Creating input fields with current values
+                    let titleInput = document.createElement("input");
+                    titleInput.value = titleElement.textContent;
+
+                    let descriptionInput = document.createElement("textarea");
+                    descriptionInput.value = descriptionElement.textContent;
+
+                    // Replacing static text with input fields
+                    taskDiv.replaceChild(titleInput, titleElement);
+                    taskDiv.replaceChild(descriptionInput, descriptionElement);
+
+                    editBtn.textContent = "Save";
+
+                }
+
+                else {
+
+                    // Getting input fields
+                    let titleInput = taskDiv.children[0];
+                    let descriptionInput = taskDiv.children[1];
+
+                    // Updating task details
+                    titleElement.textContent = titleInput.value;
+                    descriptionElement.textContent = descriptionInput.value;
+
+                    // Replacing input fields with updated text
+                    taskDiv.replaceChild(titleElement, titleInput);
+                    taskDiv.replaceChild(descriptionElement, descriptionInput);
+
+                    editBtn.textContent = "Edit";
+
+                }
+
+            });
+
+
+            // Adding elements to task div
+            taskDiv.appendChild(titleElement);
+            taskDiv.appendChild(descriptionElement);
+            taskDiv.appendChild(completeBtn);
+            taskDiv.appendChild(editBtn);
+            taskDiv.appendChild(deleteBtn);
+
+            // Adding task div to task list
+            taskList.appendChild(taskDiv);
+
+            // Clearing input fields
+            taskTitle.value = "";
+            taskDescription.value = "";
+
+        }
+
+
+        // Add Task button event
+        addTask.addEventListener("click", addNewTask);
+
+    </script>
+
+</body>
+</html>

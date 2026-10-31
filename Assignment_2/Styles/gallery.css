@@ -1,0 +1,158 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fb;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #12304a;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #ffb347;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffb347;
+}
+
+/* Page Heading */
+.heading {
+    text-align: center;
+    padding: 55px 20px;
+    background-color: white;
+}
+
+.heading h1 {
+    color: #12304a;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.heading p {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Gallery Grid */
+.gallery {
+    width: 85%;
+    max-width: 1150px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Gallery Cards */
+.gallery-item {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+}
+
+/* Images */
+.gallery-item img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Image Captions */
+.caption {
+    padding: 18px;
+    text-align: center;
+}
+
+.caption h3 {
+    color: #12304a;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.caption p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #12304a;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    font-size: 14px;
+}
+
+/* Tablet */
+@media (max-width: 850px) {
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        width: 88%;
+    }
+
+    .heading h1 {
+        font-size: 30px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+
+    <h2>Arithmetic Operations</h2>
+
+    <script>
+
+        // Taking input from user
+        let num1 = Number(prompt("Enter first number:"));
+        let num2 = Number(prompt("Enter second number:"));
+
+        // Performing arithmetic operations
+        let sum = num1 + num2;
+        let difference = num1 - num2;
+        let product = num1 * num2;
+
+        // Displaying results
+        document.write("First Number: " + num1 + "<br>");
+        document.write("Second Number: " + num2 + "<br><br>");
+
+        document.write("Sum: " + sum + "<br>");
+        document.write("Difference: " + difference + "<br>");
+        document.write("Product: " + product + "<br>");
+
+        if (num2 !== 0) {
+            let quotient = num1 / num2;
+            document.write("Quotient: " + quotient);
+        }
+        else {
+            document.write("Quotient: Cannot divide by zero");
+        }
+
+    </script>
+
+</body>
+</html>

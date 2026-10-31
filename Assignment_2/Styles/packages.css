@@ -1,109 +1,169 @@
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    color: #222;
     background-color: #f4f8fb;
+    color: #333;
 }
 
-
-/* NAVBAR */
-
+/* Navigation Bar */
 nav {
     background-color: #12304a;
-    padding: 18px;
-    text-align: center;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #ffb347;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 25px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
     color: #ffb347;
 }
 
-
-/* PACKAGE SECTION */
-
+/* Packages Section */
 .packages {
-    padding: 55px 10%;
+    padding: 55px 8%;
     text-align: center;
 }
 
 .packages h1 {
     font-size: 38px;
     color: #12304a;
-    margin: 0 0 10px;
+    margin-bottom: 12px;
 }
 
 .package-intro {
     color: #666;
     font-size: 17px;
     margin-bottom: 40px;
+    line-height: 1.6;
 }
 
-
-/* TABLE */
-
-table {
+/* Table Container */
+.table-container {
     width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    border-collapse: separate;
-    border-spacing: 0;
-    background-color: white;
+    overflow-x: auto;
     border-radius: 12px;
-    overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* Table */
+table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    background-color: white;
+}
 
-/* HEADER */
-
+/* Table Heading */
 th {
     background-color: #12304a;
     color: white;
-    padding: 18px;
+    padding: 20px 15px;
     font-size: 16px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
-
-/* DATA */
-
+/* Table Data */
 td {
-    padding: 18px;
+    padding: 20px 15px;
     border-bottom: 1px solid #e5e5e5;
     color: #444;
+    font-size: 15px;
 }
 
-
-/* PRICE */
-
-td:last-child {
+td:nth-child(4) {
     font-weight: bold;
     color: #12304a;
 }
 
-
-/* HOVER */
-
+/* Row Hover */
 tr:not(:first-child):hover {
     background-color: #fff7e8;
 }
 
+/* Book Now Button */
+.book-btn {
+    display: inline-block;
+    background-color: #12304a;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
 
-/* REMOVE BORDER FROM LAST ROW */
+.book-btn:hover {
+    background-color: #ff9f1c;
+    color: #12304a;
+}
 
-tr:last-child td {
-    border-bottom: none;
+/* Footer */
+footer {
+    background-color: #12304a;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .packages {
+        padding: 40px 5%;
+    }
+
+    .packages h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    nav a {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .package-intro {
+        font-size: 15px;
+    }
 }

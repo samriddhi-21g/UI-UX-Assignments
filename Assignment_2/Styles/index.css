@@ -1,97 +1,180 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    margin:0;
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #f4f8fb;
+    color: #333;
 }
 
+/* Navigation Bar */
+nav {
+    background-color: #12304a;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #ffb347;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffb347;
+}
+
+/* Introduction */
 .intro {
-    background-color: #f4f8fb;;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 30px;
+    background-color: #f4f8fb;
 }
 
-.intro img {
+.intro h1 {
+    color: #12304a;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.intro h4 {
+    color: #666;
+    font-size: 19px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
     width: 100%;
-    height: 350px;
+    height: 430px;
     object-fit: cover;
     display: block;
 }
 
-.intro h1{
-    font-size: 50px;
-    margin: 10px;
-    color: #12304a;
-}
-
-.intro h4{
-    font-size: 20px;
-    margin: 5px 0 20px;
-    color: #555;
-    font-style: italic;
-}
-
-.about {
-    padding: 45px 15%;
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
     text-align: center;
+    color: white;
+    text-shadow: 1px 2px 5px #222;
+}
+
+.banner-text h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff9f1c;
+    color: #12304a;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.btn:hover {
     background-color: white;
 }
 
-.about h3 {
-    font-size: 28px;
-    margin: 0 0 18px;
-     color: #12304a;
+/* About Section */
+.about {
+    background-color: white;
+    text-align: center;
+    padding: 55px 15%;
+}
+
+.about h2 {
+    color: #12304a;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .about p {
-    font-size: 17px;
-    line-height: 1.7;
     color: #555;
+    font-size: 17px;
+    line-height: 1.8;
 }
 
-.top5, 
-.tips {
-    padding: 20px,60px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-nav {
-    background-color:#12304a;
-    padding: 18px;
+/* Top Destinations */
+.top5 {
+    padding: 50px 10%;
     text-align: center;
+    background-color: #f4f8fb;
 }
 
-nav a {
-     font-weight: bold;
-    color: white;
-    text-decoration: none;
-    margin: 0 25px;
+.top5 h2,
+.tips h2 {
+    color: #12304a;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.top5 ol {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-position: inside;
+}
+
+.top5 li {
+    background-color: white;
+    padding: 18px 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     font-size: 17px;
 }
 
-nav a:hover {
-    color: #ffd166;
-}
-
+/* Travel Tips */
 .tips {
     padding: 50px 10%;
     text-align: center;
     background-color: white;
 }
 
-.tips h3 {
-    font-size: 30px;
-    color: #12304a;
-    margin-bottom: 30px;
-}
-
 .tips ul {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    padding: 0;
+    flex-wrap: wrap;
+    gap: 20px;
     list-style: none;
 }
 
@@ -103,30 +186,73 @@ nav a:hover {
     color: #444;
 }
 
-.top5 {
-    padding: 50px 10%;
+/* Footer */
+footer {
+    background-color: #12304a;
+    color: white;
     text-align: center;
-    background-color: #f4f8fb;
+    padding: 22px;
+    font-size: 14px;
 }
 
-.top5 h3 {
-    font-size: 30px;
-    color: #12304a;
-    margin-bottom: 30px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .intro h1 {
+        font-size: 38px;
+    }
+
+    .banner img {
+        height: 320px;
+    }
+
+    .banner-text h2 {
+        font-size: 28px;
+    }
+
+    .about {
+        padding: 40px 8%;
+    }
+
+    .top5 ol,
+    .tips ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top5 li,
+    .tips li {
+        width: 100%;
+    }
 }
 
-.top5 ol {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    list-style-position: inside;
-}
+@media (max-width: 500px) {
+    .banner img {
+        height: 280px;
+    }
 
-.top5 li {
-    background-color: white;
-    padding: 15px 25px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    font-size: 17px;
+    .banner-text h2 {
+        font-size: 23px;
+    }
+
+    .banner-text p {
+        font-size: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
 }

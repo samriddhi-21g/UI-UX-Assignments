@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods</title>
+</head>
+<body>
+
+    <h2>Array Methods</h2>
+
+    <script>
+
+        // Function to perform array operations
+        function processArray(numbers) {
+
+            // Removing odd numbers
+            let evenNumbers = numbers.filter(function(num) {
+                return num % 2 === 0;
+            });
+
+            // Multiplying remaining numbers by 2
+            let doubledNumbers = evenNumbers.map(function(num) {
+                return num * 2;
+            });
+
+            // Finding the sum of resulting numbers
+            let sum = doubledNumbers.reduce(function(total, num) {
+                return total + num;
+            }, 0);
+
+            // Displaying results
+            document.write("Original Array: " + numbers + "<br>");
+            document.write("Even Numbers: " + evenNumbers + "<br>");
+            document.write("Doubled Numbers: " + doubledNumbers + "<br>");
+            document.write("Sum: " + sum);
+
+        }
+
+        // Creating an array
+        let numbers = [1, 2, 3, 4, 5, 6];
+
+        // Calling the function
+        processArray(numbers);
+
+    </script>
+
+</body>
+</html>

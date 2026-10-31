@@ -1,91 +1,221 @@
+
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <head>
-    <title>Samriddhi's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Samriddhi</title>
 
-    <link rel="stylesheet" href="portfolio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <title> Samriddhi's Portfolio </title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-     <nav>
-        <a href="#About">About</a>
-        <a href="#Education">Education</a>
-        <a href="#Skills"> Skills </a>
-        <a href="#Projects">Projects</a>
-        <a href="#Contact"> Contact Details</a>
-    </nav>
-      <img src="Screenshot 2025-05-22 231150.png" alt="Image not loaded" height="200px" width="250px" title="My Photo">
-    <h1> Samriddhi Gupta </h1>
 
-    <h2 id="About"> About me </h2>
-  
-    <br>
-   
-    
-    <p> <i>Paragraph about me</i> </p>
+    <!-- Header -->
+    <header>
+        <h1>Samriddhi Gupta</h1>
+        <p class="tagline">Computer Science Student | Problem Solver | Tech Enthusiast</p>
 
-    <h2 id="Education"> Education </h2>
-    <table border="1">
-        <tr>
-            <th>Course</th>
-            <th>Specialisation</th>
-            <th>Institute</th>
-            <th>Year</th>
-            <th>Grade</th>
-        </tr>
-        <tr>
-            <td>B.E.</td>
-            <td>CSE</td>
-            <td>TIET</td>
-            <td>2024-28</td>
-            <td>9.91</td>
-        </tr>
-        <tr>
-            <td>12th</td>
-            <td>PCM</td>
-            <td>CBSE</td>
-            <td>2023-24</td>
-            <td>98.40%</td>
-        </tr>
-        <tr>
-            <td>10th</td>
-            <td>-</td>
-            <td>CBSE</td>
-            <td>2021-22</td>
-            <td>97.20%</td>
-        </tr>
-    </table>
+        <!-- Internal Navigation -->
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <h2 id="Skills"> Skills </h2>
-    <ul>
-        <li> C++ </li>
-        <li> DSA </li>
-        <li> HTML </li>
-        <li> CSS </li>
-        <li> Javascript </li>
-    </ul>
 
-    <h2 id="Projects"> Projects </h2>
-    <h3> 1. Uni-Resolve: AI-Powered Campus Reporting System </h3><h5> <i>React, Node.js, MongoDB, AI Integration</i></h5>
-        <p> • Designed a full-stack solution to address campus facility issues, automating maintenance requests.<br>
-            • Spearheaded prioritization logic using Natural Language Processing (NLP), reducing manual sorting intervention.<br>
-            • Architected system infrastructure to integrate the Google Maps API, improving resource allocation efficiency by 25%.<br>
-            • Engineered a responsive frontend to ensure accessibility across devices, aligning with inclusive design principles.
+    <!-- Section 1: About Me -->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about-container">
+
+            <img src="images/profile.jpeg"
+                 width="200"
+                 height="220"
+                 alt="Profile photograph"
+                 title="My Profile Photo">
+
+            <div class="about-text">
+                <h3>Hello! I'm Samriddhi</h3>
+
+                <p>
+                    I am a <b>Computer Science and Engineering student</b>
+                    at <strong>Thapar Institute of Engineering and Technology</strong>.
+                    I enjoy exploring technology and developing solutions
+                    through programming.
+                </p>
+
+                <p>
+                    I am interested in <i>Web Development</i>,
+                    <em>Data Structures and Algorithms</em>, and
+                    software development.
+                </p>
+
+                <p>
+                    I believe in continuous learning and improving my
+                    technical skills. My goal is to build useful and
+                    meaningful applications.
+                </p>
+
+                <p>
+                    <u>Academic Achievement:</u>
+                    <mark>Merit Scholarship Holder 2025-26</mark>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Section 2: Education -->
+    <section id="education">
+        <h2>Education</h2>
+
+        <table>
+            <tr>
+                <th colspan="4">Academic Qualifications</th>
+            </tr>
+
+            <tr>
+                <th>Degree</th>
+                <th>Institution</th>
+                <th>Year</th>
+                <th>Performance</th>
+            </tr>
+
+            <tr>
+                <td>B.Tech CSE</td>
+                <td rowspan="2">Thapar Institute of Engineering and Technology</td>
+                <td>2024 - Present</td>
+                <td>9.91 CGPA</td>
+            </tr>
+
+            <tr>
+                <td>Merit Scholarship</td>
+                <td>2025 - 2026</td>
+                <td>Top 1% of Department</td>
+            </tr>
+
+            <tr>
+                <td>Class XII</td>
+                <td>CBSE</td>
+                <td>2024</td>
+                <td>99%</td>
+            </tr>
+
+            <tr>
+                <td>Class X</td>
+                <td>CBSE</td>
+                <td>2022</td>
+                <td>97.4%</td>
+            </tr>
+        </table>
+
+        <h3>Academic Journey</h3>
+
+        <ol class="timeline">
+            <li>Completed Class X with 97.4%.</li>
+            <li>Completed Class XII with 99% in PCM.</li>
+            <li>Joined TIET for B.Tech in Computer Science.</li>
+            <li>Received the TIET Merit Scholarship.</li>
+        </ol>
+    </section>
+
+
+    <!-- Section 3: Skills -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <h3>Technical Skills</h3>
+
+        <ul class="skills-list">
+            <li>C++</li>
+            <li>C Programming</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Data Structures and Algorithms</li>
+            <li>DBMS</li>
+        </ul>
+    </section>
+
+
+    <!-- Section 4: Projects -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project-card">
+            <h3>AI-Based Skill Gap Analysis System</h3>
+
+            <p>
+                A project based on Retrieval-Augmented Generation (RAG)
+                that aims to identify students' skill gaps and provide
+                insights to help them prepare for internships and placements.
+            </p>
+
+            <a href="https://github.com/" target="_blank">
+                View on GitHub
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h3>Duplicate Issue and PR Detector</h3>
+
+            <p>
+                A machine learning project focused on identifying
+                duplicate GitHub issues and pull requests using
+                text preprocessing and classification techniques.
+            </p>
+
+            <a href="https://github.com/" target="_blank">
+                View on GitHub
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- Section 5: Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <p>
+            Feel free to connect with me for opportunities,
+            collaborations or discussions.
         </p>
 
-    <h3> 2. ATS Resume Analyzer </h3><h5> <i>Java, Spring Boot, Apache Tika </i></h5>
-        <p> • Developed a scalable backend service to parse resumes against job descriptions, achieving 95% keyword extraction
-accuracy.<br>
-            • Optimized backend algorithms in Java, resulting in a 40% reduction in execution time via efficient string manipulation.<br>
-            • Engineered robust processing pipelines to handle various data formats, ensuring strict exception handling and 99.9%
-reliability.<br>
-            • Documented technical specifications and API endpoints to facilitate future feature expansion and developer collabora-
-tion.</p>
+        <p>
+            <b>Email:</b>
+            <a href="mailto:your-email@example.com">
+                your-email@example.com
+            </a>
+        </p>
+
+        <p>
+            <b>LinkedIn:</b>
+            <a href="https://www.linkedin.com/" target="_blank">
+                Visit LinkedIn
+            </a>
+        </p>
+
+        <p>
+            <b>GitHub:</b>
+            <a href="https://github.com/" target="_blank">
+                Visit GitHub
+            </a>
+        </p>
+    </section>
 
 
-    <h2 id="Contact"> Contact Details </h2>
-    <p><i class="fa-solid fa-envelope"></i> samriddhi.21g@gmail.com </p>
-    <p> <i class="fa-solid fa-phone"></i>+91-9897424003</p>
-    <p> <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/samriddhi-gupta-sg21/">Samriddhi-gupta-sg21</a> </p>
+    <!-- Footer -->
+    <footer>
+        <p>Made by Samriddhi Gupta | © 2026</p>
+    </footer>
+
 </body>
+</html>

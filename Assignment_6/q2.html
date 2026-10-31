@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Operations</title>
+</head>
+<body>
+
+    <h2>Array Operations</h2>
+
+    <script>
+
+        // Creating an array of 5 numbers
+        let numbers = [25, 10, 45, 5, 30];
+
+        document.write("Original Array: " + numbers + "<br><br>");
+
+        // Finding largest and smallest numbers
+        let largest = Math.max(...numbers);
+        let smallest = Math.min(...numbers);
+
+        document.write("Largest Number: " + largest + "<br>");
+        document.write("Smallest Number: " + smallest + "<br><br>");
+
+        // Sorting in ascending order
+        let ascending = [...numbers];
+        ascending.sort(function(a, b) {
+            return a - b;
+        });
+
+        document.write("Ascending Order: " + ascending + "<br>");
+
+        // Sorting in descending order
+        let descending = [...numbers];
+        descending.sort(function(a, b) {
+            return b - a;
+        });
+
+        document.write("Descending Order: " + descending);
+
+    </script>
+
+</body>
+</html>

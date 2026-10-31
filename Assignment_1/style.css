@@ -1,0 +1,240 @@
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #12304a;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0;
+    color: #ffb347;
+}
+
+.tagline {
+    font-size: 17px;
+    margin: 8px 0 25px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffb347;
+}
+
+/* Common Sections */
+section {
+    padding: 45px 10%;
+    margin: 20px auto;
+    background-color: white;
+}
+
+section h2 {
+    text-align: center;
+    color: #12304a;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+section h3 {
+    color: #12304a;
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.about-container img {
+    width: 200px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #dce8f1;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+mark {
+    background-color: #ffe2a8;
+    padding: 3px 6px;
+}
+
+/* Education Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-bottom: 35px;
+}
+
+th {
+    background-color: #12304a;
+    color: white;
+    padding: 14px;
+}
+
+td {
+    padding: 13px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #fff7e8;
+}
+
+/* Academic Timeline */
+.timeline {
+    padding-left: 30px;
+}
+
+.timeline li {
+    margin-bottom: 12px;
+    padding-left: 8px;
+}
+
+/* Skills */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background-color: #eaf2f8;
+    color: #12304a;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border-left: 4px solid #ff9f1c;
+    font-weight: bold;
+}
+
+.skills-list li:hover {
+    background-color: #ffedcf;
+}
+
+/* Projects */
+.project-card {
+    background-color: #f4f8fb;
+    padding: 22px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #ff9f1c;
+}
+
+.project-card p {
+    color: #555;
+}
+
+.project-card a {
+    display: inline-block;
+    color: #12304a;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+.project-card a:hover {
+    color: #ff9f1c;
+    text-decoration: underline;
+}
+
+/* Contact */
+#contact {
+    text-align: center;
+}
+
+#contact a {
+    color: #12304a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #ff9f1c;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #12304a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    section {
+        padding: 35px 6%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 9px 5px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+}
